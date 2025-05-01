@@ -17,19 +17,19 @@ def main():
     print("Aweb - Advanced Web Intelligence Tool".center(50))
     print("=" * 50)
 
-    domain = input("Gib den Namen der Webseite ein: ").strip()
+    domain = input("Please type the name of the domain: ").strip()
     if not domain:
-        print("Fehler: Du musst eine Domain eingeben!")
+        print("invalid domain!")
         return
 
     ip = get_ip_address(domain)
     if ip:
-        print(f"[+] IP-Adresse von {domain}: {ip}")
+        print(f"[+] IP-Adress of {domain}: {ip}")
     else:
-        print("[-] Ungültiger Domain-Name. Bitte überprüfe die Eingabe.")
+        print("[-] Error: Unable to resolve the domain name.")
 
     print("=" * 50)
-    print("Danke, dass du Aweb benutzt!")
+    print("Thank you for using Aweb!")
     print("=" * 50)
 
 if __name__ == "__main__":
